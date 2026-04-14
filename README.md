@@ -51,10 +51,10 @@ This project integrates reinforcement learning into the **Madison Intelligence A
 ## Project Structure
 
 ```
-madison_rl_agent.ipynb to Main Colab notebook (run this)
-madison_rl.py to Source Python file (same code as notebook)
-madison_rl_report.pdf to Technical report
-README.md to This file
+madison_rl_agent.ipynb   Main Colab notebook (run this)
+madison_rl_report.pdf    Technical report
+README.md                This file
+learning_curves.png      Generated after running the notebook
 ```
 
 ---
