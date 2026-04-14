@@ -2,7 +2,7 @@
 **Take-Home Final: Reinforcement Learning for Agentic AI Systems** 
 **Framework:** Humanitarians.AI - Madison Intelligence Agents
 
-**Live Link: https://NMadhumitha-MSIS.github.io/Madison-RL**
+**Live Link: https://nmadhumitha-msis.github.io/Madison-RL-Agent/**
 
 ---
 
