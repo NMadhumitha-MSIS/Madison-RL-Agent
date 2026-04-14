@@ -1,5 +1,5 @@
 # Madison Intelligence Agent - Reinforcement Learning System
-**Take-Home Final: Reinforcement Learning for Agentic AI Systems**  
+**Take-Home Final: Reinforcement Learning for Agentic AI Systems** 
 **Framework:** Humanitarians.AI - Madison Intelligence Agents
 
 ---
@@ -24,10 +24,10 @@ This project integrates reinforcement learning into the **Madison Intelligence A
 1. Upload `madison_rl_agent.ipynb` to [Google Colab](https://colab.research.google.com)
 2. Run **Cell 1** to installs dependencies
 3. In **Cell 2**, set your Groq API key:
-   ```python
-   GROQ_API_KEY = "your_groq_api_key_here"
-   ```
-   Get a free key at: [console.groq.com](https://console.groq.com)
+ ```python
+ GROQ_API_KEY = "your_groq_api_key_here"
+ ```
+ Get a free key at: [console.groq.com](https://console.groq.com)
 4. **Runtime to Run All**
 5. Training runs ~5-8 minutes on Colab CPU. No GPU needed.
 
@@ -39,22 +39,22 @@ This project integrates reinforcement learning into the **Madison Intelligence A
 
 | Source | API | Key Required? |
 |--------|-----|--------------|
-| Wikipedia | REST API v1 | ❌ No |
-| arXiv | Official API | ❌ No |
-| Reddit/Technology | JSON API | ❌ No |
-| Reddit/Science | JSON API | ❌ No |
-| DuckDuckGo Instant | Instant Answer API | ❌ No |
-| Groq (LLM synthesis) | OpenAI-compatible | ✅ Free signup |
+| Wikipedia | REST API v1 | No |
+| arXiv | Official API | No |
+| Reddit/Technology | JSON API | No |
+| Reddit/Science | JSON API | No |
+| DuckDuckGo Instant | Instant Answer API | No |
+| Groq (LLM synthesis) | OpenAI-compatible | Free signup |
 
 ---
 
 ## Project Structure
 
 ```
-madison_rl_agent.ipynb   to Main Colab notebook (run this)
-madison_rl.py            to Source Python file (same code as notebook)
-madison_rl_report.pdf    to Technical report
-README.md                to This file
+madison_rl_agent.ipynb to Main Colab notebook (run this)
+madison_rl.py to Source Python file (same code as notebook)
+madison_rl_report.pdf to Technical report
+README.md to This file
 ```
 
 ---
@@ -63,13 +63,13 @@ README.md                to This file
 
 Seven-layer pipeline:
 
-1. Input          -- User query + topic context
-2. State          -- Context Encoder maps topic to index (0 to 6)
-3. Policy         -- UCB Bandit and REINFORCE select information source
-4. Action         -- Data Fetchers query Wikipedia, arXiv, Reddit, DuckDuckGo
-5. Reward         -- Content scored on success, length, keyword relevance
-6. Update         -- UCB: incremental mean. REINFORCE: policy gradient step
-7. Output         -- Groq LLaMA3-8B synthesizes intelligence report
+1. Input -- User query + topic context
+2. State -- Context Encoder maps topic to index (0 to 6)
+3. Policy -- UCB Bandit and REINFORCE select information source
+4. Action -- Data Fetchers query Wikipedia, arXiv, Reddit, DuckDuckGo
+5. Reward -- Content scored on success, length, keyword relevance
+6. Update -- UCB: incremental mean. REINFORCE: policy gradient step
+7. Output -- Groq LLaMA3-8B synthesizes intelligence report
 
 Full visual architecture diagram available at the project website.
 
@@ -80,7 +80,7 @@ Full visual architecture diagram available at the project website.
 ### UCB1 (Contextual Bandit)
 ```
 UCB(s,a,t) = Q(s,a) + c * sqrt(ln(t_s) / N(s,a))
-Q(s,a) = Q(s,a) + (r - Q(s,a)) / N(s,a)   [incremental mean]
+Q(s,a) = Q(s,a) + (r - Q(s,a)) / N(s,a) [incremental mean]
 ```
 
 ### REINFORCE (Policy Gradient)
@@ -92,7 +92,7 @@ theta_{s,a} = theta_{s,a} + alpha * (G_t - b(s)) * grad log pi(a|s; theta)
 
 ### Reward Function
 ```
-R(s,a) = r_success + r_length + r_relevance  clipped to [-1.0, 2.0]
+R(s,a) = r_success + r_length + r_relevance clipped to [-1.0, 2.0]
 ```
 
 ---
