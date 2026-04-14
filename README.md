@@ -1,8 +1,8 @@
+Live site: https://NMadhumitha-MSIS.github.io/Madison-RL
+
 # Madison Intelligence Agent - Reinforcement Learning System
 **Take-Home Final: Reinforcement Learning for Agentic AI Systems** 
 **Framework:** Humanitarians.AI - Madison Intelligence Agents
-
-**Live Link: https://nmadhumitha-msis.github.io/Madison-RL-Agent/**
 
 ---
 
