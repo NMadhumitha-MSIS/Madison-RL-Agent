@@ -33,7 +33,7 @@ This project integrates reinforcement learning into the **Madison Intelligence A
 4. **Runtime → Run All**
 5. Training runs ~5-8 minutes on Colab CPU. No GPU needed.
 
-> **No Groq key?** Leave the key as-is — the RL training still runs fully; only the LLM synthesis step is skipped.
+> **No Groq key?** Leave the key as-is - the RL training still runs fully; only the LLM synthesis step is skipped.
 
 ---
 
@@ -65,13 +65,13 @@ LearningCurve.png        Generated after running the notebook
 
 Seven-layer pipeline:
 
-1. **Input** — User query + topic context
-2. **State** — Context Encoder maps topic to index (0 to 6)
-3. **Policy** — UCB Bandit and REINFORCE select information source
-4. **Action** — Data Fetchers query Wikipedia, arXiv, Reddit, DuckDuckGo
-5. **Reward** — RewardSignalEngine scores on success, length, keyword relevance
-6. **Update** — UCB: incremental mean. REINFORCE: policy gradient step
-7. **Output** — Groq llama-3.3-70b-versatile synthesizes intelligence report
+1. **Input** - User query + topic context
+2. **State** - Context Encoder maps topic to index (0 to 6)
+3. **Policy** - UCB Bandit and REINFORCE select information source
+4. **Action** - Data Fetchers query Wikipedia, arXiv, Reddit, DuckDuckGo
+5. **Reward** - RewardSignalEngine scores on success, length, keyword relevance
+6. **Update** - UCB: incremental mean. REINFORCE: policy gradient step
+7. **Output** - Groq llama-3.3-70b-versatile synthesizes intelligence report
 
 Full visual architecture diagram available at the project website.
 
@@ -146,7 +146,7 @@ All CPU-compatible. No GPU required.
 | UCB Bandit | 0.590 | 0.873 | +0.283 |
 | REINFORCE | 0.465 | 0.553 | +0.088 |
 
-Welch t-test: UCB vs REINFORCE late phase — t=0.987, p=0.329 (not statistically significant at α=0.05)
+Welch t-test: UCB vs REINFORCE late phase - t=0.987, p=0.329 (not statistically significant at α=0.05)
 
 ---
 
