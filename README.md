@@ -142,11 +142,11 @@ All CPU-compatible. No GPU required.
 
 | Agent | Early Reward | Late Reward | Improvement |
 |-------|-------------|-------------|-------------|
-| Random Baseline | 0.762 | 0.762 | -- |
-| UCB Bandit | 0.591 | 0.893 | +0.302 |
-| REINFORCE | 0.456 | 0.553 | +0.098 |
+| Random Baseline | 0.778 | 0.778 | -- |
+| UCB Bandit | 0.590 | 0.873 | +0.283 |
+| REINFORCE | 0.465 | 0.553 | +0.088 |
 
-Welch t-test: UCB vs REINFORCE late phase — t=1.039, p=0.304 (not statistically significant at α=0.05)
+Welch t-test: UCB vs REINFORCE late phase — t=0.987, p=0.329 (not statistically significant at α=0.05)
 
 ---
 
